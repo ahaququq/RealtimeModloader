@@ -1,0 +1,8 @@
+{
+  "version": "1",
+  "entrypoints": {
+    "client": [""],
+    "common": ["io.github.ahaququq.realtime_example_mod.ExampleMod"],
+    "server": [""]
+  }
+}

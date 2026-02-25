@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "realtime_modloader",
+  "version": "${version}",
+  "name": "RealtimeModloader",
+  "description": "A realtime mod loader for Minecraft",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/realtime_modloader/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.ahaququq.realtime_modloader.client.RealtimeModloaderClient"
+    ],
+    "main": [
+      "io.github.ahaququq.realtime_modloader.RealtimeModloader"
+    ]
+  },
+  "mixins": [
+    "realtime_modloader.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
