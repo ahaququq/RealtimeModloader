@@ -5,6 +5,10 @@ annotation class Entrypoint(val env: Environment) {
 	enum class Environment(val client: Boolean, val server: Boolean) {
 		CLIENT(true,  false),
 		SERVER(false, true),
-		BOTH  (true,  true)
+		BOTH  (true,  true);
+
+		fun canRun(on: Environment): Boolean {
+			return on.client == client || on.server == server
+		}
 	}
 }
